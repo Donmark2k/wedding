@@ -4,7 +4,8 @@ import NavBar from './components/navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import  Event  from './components/event';
 import Gallery from './components/gallery';
-import Story  from './components/story'
+import Story  from './components/story';
+import Slide from './components/slide';
 
 
 
@@ -19,6 +20,8 @@ function App() {
         <Route path="/story" element={<Story />} />
 
       </Routes>
+      <Slide/>
+      <Story />
      
     </div>
   );
