@@ -5,6 +5,7 @@ import {
   Nav, Navbar, Container, Offcanvas,
 } from 'react-bootstrap';
 import logo from '../asset/ring.png';
+import Event from './event';
 
 function NavBar() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -39,28 +40,36 @@ function NavBar() {
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <NavLink
                   className="nav-link"
-                  to="/"
+                  to="/story"
                   as={Link}
                   onClick={handleOffcanvasClose}
                 >
-                  Rockets
+                  Our Story
                 </NavLink>
                 <NavLink
                   className="nav-link"
-                  to="/missions"
+                  to="/gallery"
                   as={Link}
                   onClick={handleOffcanvasClose}
                 >
-                  Missions
+                  Gallery
+                </NavLink>
+                <NavLink
+                  className="nav-link"
+                  to="/events"
+                  as={Link}
+                  onClick={handleOffcanvasClose}
+                >
+                  Event
                 </NavLink>
                 <div className="d-none d-md-none d-lg-block mt-3 mb-3 vr" />
                 <NavLink
                   className="nav-link"
-                  to="/profile"
+                  to="/events"
                   as={Link}
                   onClick={handleOffcanvasClose}
                 >
-                  My Profile
+                  Registry
                 </NavLink>
               </Nav>
             </Offcanvas.Body>
