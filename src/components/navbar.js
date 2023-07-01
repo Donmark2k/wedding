@@ -4,7 +4,7 @@ import '../App.css';
 import {
   Nav, Navbar, Container, Offcanvas,
 } from 'react-bootstrap';
-import logo from '../asset/planet.png';
+import logo from '../asset/ring.png';
 
 function NavBar() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -18,7 +18,7 @@ function NavBar() {
           <Navbar.Brand href="#">
             <img alt="planet log" src={logo} width={45} height={45} />
             {'  '}
-            Space Traveler&#39;s Hub
+            Rose&#39;s Hub
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="offcanvasNavbar"
@@ -32,7 +32,7 @@ function NavBar() {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
-                Space Traveler&#39;s Hub
+                Rose&#39;s Hub
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
