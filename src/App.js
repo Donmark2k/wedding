@@ -22,6 +22,7 @@ function App() {
       </Routes>
       <Slide/>
       <Story />
+      <Gallery />
      
     </div>
   );

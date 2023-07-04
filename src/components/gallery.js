@@ -7,16 +7,14 @@ const Gallery = () => {
     <div
       class="container-fluid bg-gallery"
       id="gallery"
-      style="padding: 120px 0; margin: 90px 0"
-    >
+      style={{ padding: '120px 0', margin: '90px 0' }}    >
       <div
         class="section-title position-relative text-center"
-        style="margin-bottom: 120px"
+        style={{ marginBottom: '120px' }}
       >
         <h6
           class="text-uppercase mb-3"
-          style="letter-spacing: 3px; color: #e47a2e !important"
-        >
+          style={{ letterSpacing: '3px', color: '#e47a2e !important' }}        >
           Gallery
         </h6>
         <h1 class="font-secondary display-4 text-white">Our Photo Gallery</h1>
@@ -27,11 +25,13 @@ const Gallery = () => {
         <div class="owl-stage-outer">
           <div
             class="owl-stage"
-            style="
-              transform: translate3d(-954px, 0px, 0px);
-              transition: all 0s ease 0s;
-              width: 3820px;
-            "
+            style={{
+
+              transform: 'translate3d(-954px, 0px, 0px)',
+              transition: 'all 0s ease 0s',
+              width: '3820px'
+            }}
+            
           >
             <div class="owl-item cloned" style="width: 318.333px">
               <div class="gallery-item">
@@ -79,7 +79,7 @@ const Gallery = () => {
               </div>
             </div>
             <div class="owl-item active" style="width: 318.333px">
-              <div wire:id="uUc4q8w6TUnvn1DNBKpS" class="gallery-item">
+              <div  class="gallery-item">
                 <img
                   class="img-fluid w-100"
                   src="https://fandg23.fidelcom.org/storage/albums/wSoqjEpefIsRCu7eCRxefeajnlKl2ClRQlEQbDAh.jpg"
@@ -138,7 +138,8 @@ const Gallery = () => {
                 </a>
               </div>
             </div>
-            <div class="owl-item" style="width: 318.333px">
+            <div class="owl-item" style=
+            {{width: '318.333px'}}>
               <div class="gallery-item">
                 <img
                   class="img-fluid w-100"
@@ -154,8 +155,8 @@ const Gallery = () => {
               </div>
             </div>
 
-            <div class="owl-item cloned" style="width: 318.333px">
-              <div wire:id="uUc4q8w6TUnvn1DNBKpS" class="gallery-item">
+            <div class="owl-item cloned" style= {{ width: '318.333px'}}>
+              <div  class="gallery-item">
                 <img
                   class="img-fluid w-100"
                   src="https://fandg23.fidelcom.org/storage/albums/SDgFVbuG4prZiz5WZtLJUPnDjpoWilSVLhtjsWCG.jpg"
