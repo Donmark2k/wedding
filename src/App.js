@@ -23,6 +23,7 @@ function App() {
       <Slide/>
       <Story />
       <Gallery />
+      <Event />
      
     </div>
   );
