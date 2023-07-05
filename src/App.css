@@ -6,6 +6,24 @@
   list-style-type: none;
 }
 
+
+.heart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: black;
+}
+
+.heart-icon {
+  color: red;
+  margin: 0 10px;
+}
+
 .gallery-item img {
   object-fit: contain;
   /* height: 100%; */

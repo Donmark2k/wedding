@@ -11,7 +11,12 @@ const Event = () => {
         Event
       </h6>
       <h1 className="font-secondary display-4">Our Wedding Event</h1>
-      <i className="far fa-heart text-dark"></i>
+      <div className="heart-container">
+  <hr className="line" />
+  <FaHeart className="heart-icon" />
+  <hr className="line" />
+</div>
+
     </div>
     <div className="row justify-content-center">
       <div className="col-md-6 text-center">
