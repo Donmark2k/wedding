@@ -1,52 +1,42 @@
-// import { FaHeart } from 'react-icons/fa';
+import { Container, Row, Col } from 'react-bootstrap';
+import { FaTwitter, FaFacebookF, FaLinkedinIn, FaInstagram, FaEnvelope, FaHeart } from 'react-icons/fa';
 
 const Footer = () => {
-  
-    return (
-        // footer
-    <div
-      class="container-fluid text-white py-5"
-      style="background-color: #121f38 !important"
-      id="contact"
-      style="margin-top: 90px"
-    >
-      <div class="container text-center py-5">
-        <div class="section-title position-relative text-center">
-          <h1 class="font-secondary display-3 text-white">Thank You</h1>
-          <i class="far fa-heart text-white"></i>
+  return (
+    <div className="container-fluid text-white py-5" style={{ backgroundColor: '#121f38' }} id="contact">
+      <Container className="text-center py-5">
+        <div className="section-title position-relative text-center">
+          <h1 className="font-secondary display-3 text-white">Thank You</h1>
+          <div className="heart-container">
+  <hr className="line" />
+  <FaHeart className="heart-icon" />
+  <hr className="line" />
+</div>        </div>
+        <div className="d-flex justify-content-center mb-4">
+          <a className="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><FaTwitter /></a>
+          <a className="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><FaFacebookF /></a>
+          <a className="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><FaLinkedinIn /></a>
+          <a className="btn btn-lg btn-outline-light btn-lg-square" href="#"><FaInstagram /></a>
         </div>
-        <div class="d-flex justify-content-center mb-4">
-          <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-          <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </div>
-        <div class="d-flex justify-content-center py-2">
-          <p class="text-white" href="#">
-            <a href="#" style="color: #e47a2e" data-cfemail="#"
-              >admin@peculiartek.com</a
-            >
+        <div className="d-flex justify-content-center py-2">
+          <p className="text-white">
+            <a href="#" style={{ color: '#e47a2e' }} data-cfemail="#">
+              <FaEnvelope className="mr-1" />
+              admin@peculiartek.com
+            </a>
           </p>
-          <span class="px-3">|</span>
-          <p class="text-white" href="#">+234 222 333 1234</p>
+          <span className="px-3">|</span>
+          <p className="text-white">+234 222 333 1234</p>
         </div>
-        <p class="m-0">
-          &copy; <a style="color: #e47a2e" href="#">P&T2023</a>. Designed by
-          <a style="color: #e47a2e" href="https://peculiartek.com"
-            >PECULIARTEK ENTERPRISE</a
-          >
+        <p className="m-0">
+          &copy; <a style={{ color: '#e47a2e' }} href="#">P&T2023</a>. Designed by{' '}
+          <a style={{ color: '#e47a2e' }} href="https://peculiartek.com">
+            PECULIARTEK ENTERPRISE
+          </a>
         </p>
-      </div>
+      </Container>
     </div>
-      );
-  };
-  export default Footer;
-  
+  );
+};
+
+export default Footer;
