@@ -5,7 +5,7 @@ import {
   Nav, Navbar, Container, Offcanvas,
 } from 'react-bootstrap';
 import logo from '../asset/ring.png';
-import Event from './event';
+// import Event from './event';
 
 function NavBar() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -65,7 +65,7 @@ function NavBar() {
                 <div className="d-none d-md-none d-lg-block mt-3 mb-3 vr" />
                 <NavLink
                   className="nav-link"
-                  to="/events"
+                  to="/gifts"
                   as={Link}
                   onClick={handleOffcanvasClose}
                 >

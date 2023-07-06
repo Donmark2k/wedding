@@ -7,6 +7,7 @@ import Gallery from './components/gallery';
 import Story  from './components/story';
 import Slide from './components/slide';
 import Footer from './components/footer';
+import Gift from './components/gift'
 
 
 
@@ -19,7 +20,7 @@ function App() {
         <Route path="/events" element={<Event />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/story" element={<Story />} />
-
+        <Route path="/gifts" element={<Gift />} />
       </Routes>
       <Slide/>
       <Story />
