@@ -22,16 +22,16 @@ const Footer = () => {
           <p className="text-white">
             <a href="#" style={{ color: '#e47a2e' }} data-cfemail="#">
               <FaEnvelope className="mr-1" />
-              admin@peculiartek.com
+              chukwuemekavp@gmail.com
             </a>
           </p>
           <span className="px-3">|</span>
-          <p className="text-white">+234 222 333 1234</p>
+          <p className="text-white">+234 706 330 8955</p>
         </div>
         <p className="m-0">
-          &copy; <a style={{ color: '#e47a2e' }} href="#">P&T2023</a>. Designed by{' '}
-          <a style={{ color: '#e47a2e' }} href="https://peculiartek.com">
-            PECULIARTEK ENTERPRISE
+          &copy; <a style={{ color: '#e47a2e' }} href="#">R&J2023</a>. Designed by{' '}
+          <a style={{ color: '#e47a2e' }} href="https://chukwuemekavp.netlify.app/">
+            CHUKWUEMEKAVP ENTERPRISE
           </a>
         </p>
       </Container>
