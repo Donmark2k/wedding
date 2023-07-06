@@ -1,6 +1,6 @@
-import { FaHeart } from 'react-icons/fa';
+// import { FaHeart } from 'react-icons/fa';
 
-const Event = () => {
+const Footer = () => {
   
     return (
         // footer
@@ -48,5 +48,5 @@ const Event = () => {
     </div>
       );
   };
-  export default Event;
+  export default Footer;
   

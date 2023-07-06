@@ -6,6 +6,7 @@ import  Event  from './components/event';
 import Gallery from './components/gallery';
 import Story  from './components/story';
 import Slide from './components/slide';
+import Footer from './components/footer';
 
 
 
@@ -24,6 +25,7 @@ function App() {
       <Story />
       <Gallery />
       <Event />
+      <Footer />
      
     </div>
   );
