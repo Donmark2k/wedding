@@ -1,49 +1,52 @@
 import React from 'react';
 
 const Gift = () => {
+  const projects = [
+    {
+      id: '1',
+      name: 'Covid-19 Countries\' Statistics',
+      homeImage: 'src/asset/gift/covidM.png',
+      description: 'Covid-19 Countries\' Statistics',
+      technologies: ['redux', 'Bootstrap', 'reactJS'],
+      modalInfo: 'A COVID-19 statistics app is a mobile application designed to provide up-to-date information on the number of confirmed cases, deaths, and recoveries from the COVID-19 pandemic. The app can help users track the current situation of the pandemic in their country or region, and also provide information on the trends and patterns of the virus globally.',
+      liveLink: 'https://covidst.netlify.app/',
+      sourceLink: 'https://github.com/Donmark2k/covid-stat',
+    },
+    {
+      id: '2',
+      name: 'Leaderboard',
+      homeImage: 'src/asset/gift/leaderboardM.png',
+      description: 'Leaderboard',
+      technologies: ['Javascript', 'css', 'html'],
+      modalInfo: 'A leaderboard is a feature commonly found in competitive online games and applications, including chess, that displays the rankings of players based on their scores or other performance metrics.',
+      liveLink: 'https://donmark2k.github.io/leaderboard/dist/',
+      sourceLink: 'https://github.com/Donmark2k/leaderboard',
+    },
+    // Add other project objects here...
+  ];
+
   return (
-    <div className="modal" id="exampleModal2" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true" data-backdrop="false">
-    <div className="modal-dialog" role="document">
-      <div className="modal-content">
-        <div className="modal-header">
-          <h5 className="modal-title" id="exampleModalLabel2">Modal title</h5>
-          <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div className="modal-body">
-          <form method="POST" action="#" acceptCharset="UTF-8" className="form-horizontal" role="form">
-            <input type="hidden" name="_token" value="" />
-            <div className="row" style={{ marginBottom: '40px' }}>
-              <div className="col-md-8 col-md-offset-2">
-                <p>
-                  <div>
-                    Premium Stainless Steel 18L All In One Air Fryer Oven
-                    ₦ 139,000.00
-                  </div>
-                </p>
-                <input type="text" name="name" placeholder="Name" required />
-                <input type="text" name="email" placeholder="Email" required />
-                <input type="hidden" name="orderID" value="345" />
-                <input type="hidden" name="item" value="Premium Stainless Steel 18L All In One Air Fryer Oven" />
-                <input type="hidden" name="amount" value="13900000" />
-                <input type="hidden" name="quantity" value="1" />
-                <input type="hidden" name="currency" value="NGN" />
-                <input type="hidden" name="metadata" value="{&quot;key_name&quot;:&quot;Premium Stainless Steel 18L All In One Air Fryer Oven&quot;}" />
-                <input type="hidden" name="reference" value="Xj1J0W8PhOOETOV1EJd0kEQQN" />
-                <p>
-                  <button className="btn btn-success btn-lg btn-block" type="submit" value="Pay Now!">
-                    <i className="fa fa-plus-circle fa-lg"></i> Gift Us Now!
-                  </button>
-                </p>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-);
+    <section id="myrecentwork" className="grid-container" aria-label="my recent work">
+      {projects.map((project) => (
+        <article key={project.id} className="firstbox">
+          <div className="recentImage">
+            <img className="articlePic" src={project.homeImage} alt="image details" />
+          </div>
+          <p>{project.description}</p>
+          <ul aria-label="Languages used in coding the work">
+            {project.technologies.map((technology) => (
+              <li key={technology}>{technology}</li>
+            ))}
+          </ul>
+          <div className="button-box">
+            <a href={project.liveLink} className="see-more buttons" aria-label="view">
+              See Project
+            </a>
+          </div>
+        </article>
+      ))}
+    </section>
+  );
 };
 
 export default Gift;
