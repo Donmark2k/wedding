@@ -216,7 +216,7 @@ const Gallery = () => {
         <i className="far fa-heart text-white"></i>
       </div>
 
-      <Carousel className="gallery-carousel" interval={5000} pauseOnHover={true} indicators={false} controls={true}>
+      <Carousel className="gallery-carousel" interval={5000}  indicators={false} controls={true}>
         <Carousel.Item>
           <div className="gallery-item">
             <img

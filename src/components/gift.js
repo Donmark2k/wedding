@@ -80,13 +80,13 @@ const Gift = () => {
         ))}
       </section>
 
-     {selectedProject && (
+  {selectedProject && (
   <section className="modal-container">
     <div className="modal">
       <div className="modal-box">
         <img
           className="close"
-          src={closeIcon}
+          src={selectedProject.closeIcon}
           alt="close icon"
           onClick={closeModal}
         />
@@ -94,28 +94,44 @@ const Gift = () => {
         <div className="modal-img">
           <img
             className="desktopPic"
-            src={selectedProject?.desktopImage}
+            src={selectedProject.desktopImage}
             alt="language details"
           />
           <img
             className="cardPic"
-            src={selectedProject?.cardImage}
+            src={selectedProject.cardImage}
             alt="language details"
           />
         </div>
 
         <div className="h1-button">
-          <h2 className="modal-h1">{selectedProject?.name}</h2>
-          
+          <h2 className="modal-h1">{selectedProject.name}</h2>
+          <div className="modal-anchor2">
+            <a href={selectedProject.liveLink} className="modal-href2">
+              See Live
+              <img
+                className="modal-href-pic"
+                src="img/see-live.png"
+                alt="see live icon"
+              />
+            </a>
+            <a href={selectedProject.sourceLink} className="modal-href2">
+              See Source
+              <img
+                className="modal-href-pic"
+                src="img/see-source.png"
+                alt="see source icon"
+              />
+            </a>
+          </div>
         </div>
 
-                <p className="modal-p">{selectedProject?.modalInfo}</p>
-
-       
+        <p className="modal-p">{selectedProject.modalInfo}</p>
       </div>
     </div>
   </section>
 )}
+
 
     </>
   );
