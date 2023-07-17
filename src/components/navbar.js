@@ -16,7 +16,7 @@ function NavBar() {
     <div>
       <Navbar bg="light" expand="lg" className="mb-3">
         <Container fluid>
-          <Navbar.Brand href="#">
+          <Navbar.Brand as={Link} to="/">
             <img alt="planet log" src={logo} width={45} height={45} />
             {'  '}
             Rose&#39;s Hub

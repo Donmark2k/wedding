@@ -81,7 +81,8 @@ const Gift = () => {
       </section>
 
   {selectedProject && (
-  <section className="modal-container">
+  <section className="modalContainer">
+  <h1>You are welcome</h1>
     <div className="modal">
       <div className="modal-box">
         <img
