@@ -6,6 +6,14 @@
   list-style-type: none;
 }
 
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 80vh;
+  max-height: 100%;
+}
+
+
 
 .heart-container {
   display: flex;
@@ -280,11 +288,12 @@ img.articlePic {
 }
 
 @media (min-width: 768px) {
-  .carousel-item img {
-    object-fit: cover;
 
-    height: 700px; /* Adjust the height as needed */
+  
+  .carousel-item img {
+    height: 100vh; 
   }
+
   .about_container {
     grid-template-columns: repeat(2, 1fr);
   }

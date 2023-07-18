@@ -5,7 +5,6 @@ import {
   Nav, Navbar, Container, Offcanvas,
 } from 'react-bootstrap';
 import logo from '../asset/ring.png';
-// import Event from './event';
 
 function NavBar() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
