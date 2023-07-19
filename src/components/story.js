@@ -1,4 +1,6 @@
 import { FaTwitter, FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import storyA from '../asset/couple/storyA.jpg';
+import storyB from '../asset/couple/storyB.jpg';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -20,11 +22,11 @@ const Story = () => {
                 <h3 className="mb-3" >The Groom</h3>
                 <p style={{ lineHeight: '1.8', fontSize: '17px' }}>
                   My Still water, the decision to marry you is the best I have made in my life. You gave so much joy and peace.
-                  And I want to let you know that I will do everything it takes to see a smile on your faces forever. I love you baby.
+                  And I want to let you know that I will do everything it takes to see a smile on your faces forever.
                   #FGFOREVERAFTER2023.
                 </p>
                 <h3 className="font-secondary font-weight-normal text-muted mb-3">
-                  <i className="fa fa-male pr-3" style={{ color: '#e47a2e' }}></i>Fidelis
+                  <i className="fa fa-male pr-3" style={{ color: '#e47a2e' }}></i>Joseph
                 </h3>
                 <div className="media_icon">
                   <a className="btn btn-outline-primary btn-square mr-1" href="#"><FaTwitter /></a>
@@ -35,11 +37,11 @@ const Story = () => {
               </div>
             
         <div className="about_image">
-              <img className=""          src="https://unsplash.com/photos/n0__vDfdTHg/download?force=true"  />
+              <img className=""          src={storyB} />
             </div>
             
         <div className="about_image">
-              <img className="" src="https://unsplash.com/photos/W7b3eDUb_2I/download?force=true"
+              <img className="" src={storyA}
                 />
             </div>
            
@@ -52,7 +54,7 @@ const Story = () => {
                   #FGFOREVERAFTER2023.
                 </p>
                 <h3 className="font-secondary font-weight-normal text-muted mb-3">
-                  <i className="fa fa-male pr-3" style={{ color: '#e47a2e' }}></i>Amanda
+                  <i className="fa fa-male pr-3" style={{ color: '#e47a2e' }}></i>Rose
                 </h3>
                 <div className="media_icon down">
                   <a className="btn btn-outline-primary btn-square mr-1" href="#"><FaTwitter /></a>

@@ -13,8 +13,6 @@
   max-height: 100%;
 }
 
-
-
 .heart-container {
   display: flex;
   align-items: center;
@@ -34,18 +32,8 @@
 
 .gallery-item img {
   object-fit: contain;
-  /* height: 100%; */
-  /* width: 100%; */
 }
 
-
-/* .about_container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(326px, 2fr));
-  justify-content: space-between;
-  margin: 10px auto 20px auto;
-  gap: 24px;
-} */
 .about_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(326px, 1fr));
@@ -53,6 +41,8 @@
   margin: 10px auto 20px auto;
   gap: 4px;
   padding: 0 24px;
+  background-color:#EDF5F7;
+
 }
 
 .about_me h3 {
@@ -73,6 +63,7 @@
 }
 
 .about_image img {
+  object-fit: contain;
   width: 100%;
   height: 400px;
 }
@@ -85,6 +76,7 @@
 .down {
   padding-bottom: 10px;
 }
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 3fr));
@@ -293,8 +285,27 @@ img.articlePic {
   .carousel-item img {
     height: 100vh; 
   }
+  .about_image img {
+    object-fit: contain;
+  }
+  .down {
+    padding-bottom: 3%;
+  }
 
   .about_container {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (min-width: 890px) {
+  .down {
+    padding-bottom: 9%;
+  }
+
+}
+@media (min-width: 1080px) {
+  .down {
+    padding-bottom: 12%;
+  }
+
 }
