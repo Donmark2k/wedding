@@ -63,7 +63,7 @@
 }
 
 .about_image img {
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
   height: 400px;
 }
@@ -76,6 +76,12 @@
 .down {
   padding-bottom: 10px;
 }
+ .meetImage  {
+  display: flex;
+  align-items: center;
+  
+} 
+
 
 .grid-container {
   display: grid;

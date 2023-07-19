@@ -1,9 +1,10 @@
 import { FaTwitter, FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import storyA from '../asset/couple/storyA.jpg';
 import storyB from '../asset/couple/storyB.jpg';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import meetA from '../asset/couple/meetA.jpg';
+import meetB from '../asset/couple/meetB.jpg';
+import { Image } from 'react-bootstrap';
+
 
 const Story = () => {
   return (
@@ -79,27 +80,28 @@ const Story = () => {
     </div>
     <div className="container timeline position-relative p-0">
       <div className="row">
-        <div className="col-md-6 text-center text-md-right">
-          <img
-            className="img-fluid mr-md-3"
-            src="https://fandg23.fidelcom.org/img/story-1.jpg"
-            alt=""
-          />
+        <div className="col-md-6 text-center text-md-right meetImage">
+
+          <Image
+          className="img-fluid mr-md-3"
+          src={meetA}
+          alt="Our first date"
+        />
         </div>
         <div className="col-md-6 text-center text-md-left">
           <div className="h-100 d-flex flex-column justify-content-center p-4 ml-md-3" style={{ background: '#edf5f7' }}>
             <h4 className="mb-2">First Meet</h4>
-            <p className="text-uppercase mb-2">June 2013</p>
+            <p className="text-uppercase mb-2">August 2019</p>
             <p className="m-0" style={{ fontSize: '17px' }}>
-              <b>Godsfavour:</b> The first time I met Fidel was in school, CASOR Unizik, Awka. Waow🤗. I know, right? He was
+              <b>Rose:</b> The first time I met Joseph was in Mr. Aniobi Office, Computer Lab UNIAGRIC, Makurdi. Waow🤗. I know, right? He was
               really a caring fellow, always ready to help out and had no time to waste. We had a brother and sister
               friendship, lol. If anyone told me this would be your husband, I would have just laughed at the person.
               Like, you are a joker!🧐
             </p>
             <p className="m-2" style={{ fontSize: '17px' }}>
-              <b>Fidelis:</b> My first encounter with Godsfavour (GF) as we do call her back then was in CASOR. Hmmmm! We
-              were just elected as Excos and during our first meeting we were asked to introduce ourselves and she did.
-              What got my attention was her surname “Okpara”. I was like I have seen my sister that my dad gave birth to
+              <b>Joseph:</b> My first encounter with Rose (Rosy) as I do call her back then was in SCIENCE PARK. Hmmmm! We
+              were just gisting and during our first meeting, I asked her 'What is your name' .
+              What got my attention was her surname “Okpe”. I was like I have seen my sister that my dad gave birth to
               without informing us.
             </p>
           </div>
@@ -114,7 +116,7 @@ const Story = () => {
             <h4 className="mb-2">First Date</h4>
             <p className="text-uppercase mb-2">June 2022</p>
             <p className="m-0" style={{ fontSize: '17px' }}>
-              <b>Godsfavour:</b> Fast forward to after school, life continues, Fidel came into the picture and in my mind,
+              <b>Rose:</b> Fast forward to after school, life continues, Fidel came into the picture and in my mind,
               my brother in a far-away land. The friendship grew more than ever. The chemistry was different. Initially, I
               thought my guy was joking, but here we are❤. Fidel has impacted my life greatly and consistently helps me to
               be a better person. Yeah... I'm blessed to have him by my side. He is just the crown😍 that fits me. The one
@@ -122,27 +124,27 @@ const Story = () => {
             </p>
             <br />
             <p className="m-2" style={{ fontSize: '17px' }}>
-              <b>Fidelis:</b> Fast forward to the present. Asking GF out was like a high mountain that I needed to climb
+              <b>Joseph:</b> Fast forward to the present. Asking Rosy out was like a high mountain that I needed to climb
               but thank God who did all the underground job for me. Here we are today ready to walk down the aisle.
             </p>
             <br />
             <p className="m-0">
-              <b>Godsfavour:</b> Love is patient, love is kind; it is not self-seeking....Baby that love is you🥹. Let's make
+              <b>Rose:</b> Love is patient, love is kind; it is not self-seeking....Baby that love is you🥹. Let's make
               this journey to forever together and I love you deeply💋
             </p>
             <br />
             <p className="m-0">
-              <b>Fidelis:</b> My still water, the love of my youth, the joy that fills my heart. This journey is going to be
+              <b>Joseph:</b> My still water, the love of my youth,the semicolon to my java code, the joy that fills my heart. This journey is going to be
               a very smooth ride. I love ❤ you with all that is in me.
             </p>
           </div>
         </div>
-        <div className="col-md-6 text-center text-md-left">
-          <img
-            className="img-fluid ml-md-3"
-            src="https://fandg23.fidelcom.org/img/story-2.jpg"
-            alt=""
-          />
+        <div className="col-md-6 text-center text-md-left meetImage">
+        <Image
+          className="img-fluid mr-md-3"
+          src={meetB}
+          alt="Our first date"
+        />
         </div>
       </div>
     </div>
