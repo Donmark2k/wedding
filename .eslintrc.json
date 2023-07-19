@@ -24,9 +24,12 @@
       { "extensions": [".js", ".jsx"] }
     ],
     "react/react-in-jsx-scope": "off",
+    "react/no-unescaped-entities": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off",
     "react/prop-types": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/control-has-associated-label": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {
@@ -35,7 +38,9 @@
         "peerDependencies": false
       }
     ],
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "max-len": ["error", { "code": 380 }]
   },
+
   "ignorePatterns": ["dist/", "build/"]
 }

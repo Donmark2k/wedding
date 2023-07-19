@@ -13,7 +13,7 @@ const Gift = () => {
       name: 'Covid-19 Countries\' Statistics',
       homeImage: covidMImage,
       cardImage: mathImage,
-      closeIcon: closeIcon,
+      closeIcon,
       desktopImage: mathImage,
       description: 'Covid-19 Countries\' Statistics',
       modalInfo: 'A COVID-19 statistics app is a mobile application designed to provide up-to-date information on the number of confirmed cases, deaths, and recoveries from the COVID-19 pandemic. The app can help users track the current situation of the pandemic in their country or region, and also provide information on the trends and patterns of the virus globally.',
@@ -25,7 +25,7 @@ const Gift = () => {
       name: 'Leaderboard',
       homeImage: leaderboardMImage,
       cardImage: mathImage,
-      closeIcon: closeIcon,
+      closeIcon,
       desktopImage: mathImage,
       description: 'Leaderboard',
       modalInfo: 'A leaderboard is a feature commonly found in competitive online games and applications, including chess, that displays the rankings of players based on their scores or other performance metrics.',
@@ -37,7 +37,7 @@ const Gift = () => {
       name: 'Leaderboard',
       homeImage: leaderboardMImage,
       cardImage: mathImage,
-      closeIcon: closeIcon,
+      closeIcon,
       desktopImage: mathImage,
       description: 'Leaderboard',
       modalInfo: 'A leaderboard is a feature commonly found in competitive online games and applications, including chess, that displays the rankings of players based on their scores or other performance metrics.',
@@ -63,7 +63,7 @@ const Gift = () => {
         {projects.map((project) => (
           <article key={project.id} className="articleBox">
             <div className="recentImage">
-              <img className="articlePic" src={project.homeImage} alt="image details" />
+              <img className="articlePic" src={project.homeImage} alt="gift details" />
             </div>
             <p>{project.description}</p>
             <div className="button-box">
@@ -80,59 +80,68 @@ const Gift = () => {
         ))}
       </section>
 
-  {selectedProject && (
-  <section className="modalContainer">
-  <h1>You are welcome</h1>
-    <div className="modal">
-      <div className="modal-box">
-        <img
-          className="close"
-          src={selectedProject.closeIcon}
-          alt="close icon"
-          onClick={closeModal}
-        />
-
-        <div className="modal-img">
-          <img
-            className="desktopPic"
-            src={selectedProject.desktopImage}
-            alt="language details"
-          />
-          <img
-            className="cardPic"
-            src={selectedProject.cardImage}
-            alt="language details"
-          />
-        </div>
-
-        <div className="h1-button">
-          <h2 className="modal-h1">{selectedProject.name}</h2>
-          <div className="modal-anchor2">
-            <a href={selectedProject.liveLink} className="modal-href2">
-              See Live
+      {selectedProject && (
+      <section className="modalContainer">
+        <h1>You are welcome</h1>
+        <div className="modal">
+          <div className="modal-box">
+            {/* <img
+              className="close"
+              src={selectedProject.closeIcon}
+              alt="close icon"
+              onClick={closeModal}
+            /> */}
+            <button
+              className="close"
+              onClick={closeModal}
+              type="button"
+            >
               <img
-                className="modal-href-pic"
-                src="img/see-live.png"
-                alt="see live icon"
+                src={selectedProject.closeIcon}
+                alt="close icon"
               />
-            </a>
-            <a href={selectedProject.sourceLink} className="modal-href2">
-              See Source
+            </button>
+
+            <div className="modal-img">
               <img
-                className="modal-href-pic"
-                src="img/see-source.png"
-                alt="see source icon"
+                className="desktopPic"
+                src={selectedProject.desktopImage}
+                alt="language details"
               />
-            </a>
+              <img
+                className="cardPic"
+                src={selectedProject.cardImage}
+                alt="language details"
+              />
+            </div>
+
+            <div className="h1-button">
+              <h2 className="modal-h1">{selectedProject.name}</h2>
+              <div className="modal-anchor2">
+                <a href={selectedProject.liveLink} className="modal-href2">
+                  See Live
+                  <img
+                    className="modal-href-pic"
+                    src="img/see-live.png"
+                    alt="see live icon"
+                  />
+                </a>
+                <a href={selectedProject.sourceLink} className="modal-href2">
+                  See Source
+                  <img
+                    className="modal-href-pic"
+                    src="img/see-source.png"
+                    alt="see source icon"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <p className="modal-p">{selectedProject.modalInfo}</p>
           </div>
         </div>
-
-        <p className="modal-p">{selectedProject.modalInfo}</p>
-      </div>
-    </div>
-  </section>
-)}
-
+      </section>
+      )}
 
     </>
   );
