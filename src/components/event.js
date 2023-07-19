@@ -1,11 +1,15 @@
 import { FaHeart } from 'react-icons/fa';
+import eventA from '../asset/couple/eventA.jpg';
+import eventB from '../asset/couple/eventB.jpg';
+import { Image } from 'react-bootstrap';
+
 
 const Event = () => {
   
     return (
       // Wedding Event
       <div className="container-fluid py-5" id="event">
-  <div className="container py-5">
+  <div className="container py-1">
     <div className="section-title position-relative text-center">
       <h6 className="text-uppercase mb-3" style={{letterSpacing: '3px', color: '#e47a2e'}}>
         Event
@@ -28,12 +32,12 @@ const Event = () => {
     <div className="row">
       <div className="col-md-6 border-right" style={{borderColor: '#e47a2e'}}>
         <div className="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-          <img
-            className="img-fluid mb-4"
-            src="https://fandg23.fidelcom.org/storage/albums/GnwxYQfn0LThj1psMJZwo5Cvl263V1Lk6l2geErL.jpg"
-            alt=""
-          />
-          <h4 className="mb-3">The Reception</h4>
+        <Image
+          className="img-fluid mr-md-3"
+          src={eventA}
+          alt="Our first meet"
+        />
+          <h4 className="my-3">The Reception</h4>
           <p className="mb-2">
             CWO Hall, Our Lady of Assumption Catholic Church, Okwuani, Nnewi, Anambra State.
           </p>
@@ -43,17 +47,17 @@ const Event = () => {
       </div>
       <div className="col-md-6">
         <div className="text-center text-md-left ml-md-3">
-          <img
-            className="img-fluid mb-4"
-            src="https://fandg23.fidelcom.org/img/event-2.jpg"
-            alt=""
-          />
-          <h4 className="mb-3">Wedding Party</h4>
+        <Image
+          className="img-fluid mr-md-3"
+          src={eventB}
+          alt="Our first meet"
+        />
+          <h4 className="my-3">Wedding Party</h4>
           <p className="mb-2">
             HOUSE ON THE ROCK, NNEWI. 150 IGWE ORIZU RD, OTOLO, NNEWI, ANAMBRA STATE.
           </p>
           <p className="mb-0">10:00AM - 12:00PM</p>
-          <p className="mb-0">20 May, 2023</p>
+          <p className="mb-0">29th July, 2023</p>
         </div>
       </div>
     </div>

@@ -20,9 +20,10 @@
 }
 
 .line {
-  flex-grow: 1;
-  height: 1px;
+  flex-grow: 0.5;
+  height: 4px;
   background-color: black;
+  width: 20px;
 }
 
 .heart-icon {

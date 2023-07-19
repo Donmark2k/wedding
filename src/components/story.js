@@ -85,7 +85,7 @@ const Story = () => {
           <Image
           className="img-fluid mr-md-3"
           src={meetA}
-          alt="Our first date"
+          alt="Our first meet"
         />
         </div>
         <div className="col-md-6 text-center text-md-left">
@@ -150,10 +150,7 @@ const Story = () => {
     </div>
   </div>
 </div>
-
         </section>
-
-      {/* Our story */}
     </>
   );
 };
