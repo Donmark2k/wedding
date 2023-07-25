@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { BiRightArrow, BiLeftArrow } from 'react-icons/bi';
 import {
-  Container, Row, Col, Button, Pagination,
+  Container, Row, Col, Pagination,
 } from 'react-bootstrap';
 import gallery1 from '../asset/couple/gallery1.jpg';
 import gallery2 from '../asset/couple/gallery2.png';

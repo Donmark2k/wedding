@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   FaTwitter, FaFacebookF, FaLinkedinIn, FaInstagram,
 } from 'react-icons/fa';
@@ -10,7 +11,7 @@ import meetB from '../asset/couple/meetB.jpg';
 const Story = () => (
   <>
     {/* ABOUT US */}
-    <div className="d:b pt-1 text-center" id="about">
+    <div className="d:b pt-1 text-center" id="story">
       <h6 className="text-uppercase mb-3 mt-4" style={{ letterSpacing: '3px', color: '#e47a2e', fontSize: '2rem' }}>
         About
       </h6>

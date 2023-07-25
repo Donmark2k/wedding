@@ -12,7 +12,7 @@ function Slide() {
   };
 
   return (
-    <div className="container-fluid p-0 mb-2 slide" id="home" style={{ height: '100vh' }}>
+    <div className="container-fluid p-0 mb-2 slide" id="home" style={{ height: 'auto' }}>
 
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
