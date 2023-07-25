@@ -64,7 +64,12 @@ const Media = () => {
             ))}
           </Row>
         </Row>
-        <Row className="justify-content-center">
+        <Row
+          className="justify-content-center"
+          style={{
+            display: 'block', paddingTop: '20px', margin: '0 auto', width: '100%',
+          }}
+        >
           <Pagination>
             {Array.from({ length: totalPages }, (_, index) => (
               <Pagination.Item key={index} active={index + 1 === currentPage} onClick={() => handlePageChange(index + 1)}>
