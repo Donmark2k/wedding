@@ -87,7 +87,7 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 3fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 4fr));
   justify-content: center;
   align-self: auto;
   align-content: center;
@@ -99,7 +99,7 @@
 .articleBox {
   border: 2px solid #d0d9d4;
   width: 100%;
-  height: 575px;
+  height: auto;
   border-radius: 8px;
   background-color: #ebf0ee;
   box-shadow:
@@ -108,22 +108,24 @@
 }
 
 .recentImage {
-  height: 390px;
+  height: 250px;
   border-radius: 8px;
   border-bottom: 3px solid green;
 }
 
 img.articlePic {
-  height: 380px;
   width: 90%;
   border-radius: 12px;
   margin: 12px auto;
   display: block;
+  height: 240px;
 }
 
 .button-box {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .li-technology p {
