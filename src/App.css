@@ -43,14 +43,14 @@
   margin: 10px auto 20px auto;
   gap: 4px;
   padding: 0 24px;
-  background-color:#EDF5F7;
-
+  background-color: #edf5f7;
 }
 
 .about_me h3 {
   text-align: center;
   padding: 12px;
 }
+
 .about_container p {
   text-align: center;
   padding: 6px 24px;
@@ -72,18 +72,18 @@
 
 .about_me {
   background: #edf5f7;
+
   /* height: 400px; */
 }
 
 .down {
   padding-bottom: 10px;
 }
- .meetImage  {
+
+.meetImage {
   display: flex;
   align-items: center;
-  
-} 
-
+}
 
 .grid-container {
   display: grid;
@@ -96,6 +96,7 @@
   width: 85%;
   margin: 12px auto;
 }
+
 .articleBox {
   border: 2px solid #d0d9d4;
   width: 100%;
@@ -138,7 +139,6 @@ img.articlePic {
   margin-left: 2%;
 }
 
-
 .see-more {
   background-color: green;
   color: white;
@@ -151,7 +151,6 @@ img.articlePic {
   text-align: center;
 }
 
-
 .modal-box {
   border: 1px solid green;
   background-color: #fff;
@@ -161,11 +160,11 @@ img.articlePic {
   height: 400px;
   justify-content: center;
   border-radius: 16px;
-  
   box-shadow:
     0 5px 12px rgba(5, 50, 200, 0.5),
     0 5px 12px rgba(5, 50, 200, 0.5);
 }
+
 /* .galleryImage {
   width: 90%;
   margin: 0 auto;
@@ -175,14 +174,14 @@ img.articlePic {
 }
 
 @media (min-width: 768px) {
-
-  
   .carousel-item img {
-    height: 100vh; 
+    height: 100vh;
   }
+
   .about_image img {
     object-fit: contain;
   }
+
   .down {
     padding-bottom: 3%;
   }
@@ -196,11 +195,10 @@ img.articlePic {
   .down {
     padding-bottom: 9%;
   }
-
 }
+
 @media (min-width: 1080px) {
   .down {
     padding-bottom: 12%;
   }
-
 }
