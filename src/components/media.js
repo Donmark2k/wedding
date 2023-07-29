@@ -55,6 +55,7 @@ const Media = () => {
             {images.slice(startIndex, endIndex).map((item) => (
               <Col key={item.id} id={item.id} xs={12} sm={6} md={4} lg={3} className="card-main shadow-md hover:scale-105 transition-transform duration-300">
                 <img
+                  className="galleryImage"
                   src={item.src}
                   alt={item.alt}
                   style={{ display: imageLoaded ? 'block' : 'none' }}
