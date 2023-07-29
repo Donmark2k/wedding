@@ -166,9 +166,12 @@ img.articlePic {
     0 5px 12px rgba(5, 50, 200, 0.5),
     0 5px 12px rgba(5, 50, 200, 0.5);
 }
-.galleryImage {
+/* .galleryImage {
   width: 90%;
   margin: 0 auto;
+} */
+.pageNumber {
+  width: 80%;
 }
 
 @media (min-width: 768px) {

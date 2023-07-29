@@ -71,7 +71,7 @@ const Media = () => {
             display: 'block', paddingTop: '20px', margin: '0 auto', width: '100%',
           }}
         >
-          <Pagination>
+          <Pagination className="pageNumber">
             {Array.from({ length: totalPages }, (_, index) => (
               <Pagination.Item key={index} active={index + 1 === currentPage} onClick={() => handlePageChange(index + 1)}>
                 {index + 1}
