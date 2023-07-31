@@ -42,19 +42,19 @@ const Present = () => {
     },
     {
       id: '5',
-      name: 'blender',
+      name: 'Fruit Blender',
       image: blender,
       amount: '30,000',
     },
     {
       id: '6',
-      name: 'cooker',
+      name: 'Gas Cylinder',
       image: cooker,
       amount: '120,000',
     },
     {
       id: '7',
-      name: 'Oven',
+      name: 'Toaster',
       image: oven,
       amount: '32,000',
     },
@@ -84,7 +84,7 @@ const Present = () => {
     },
     {
       id: '12',
-      name: 'TV',
+      name: 'Plasma TV',
       image: tv,
       amount: '70,000',
     },

@@ -1,7 +1,7 @@
 import Event from './event';
 import Story from './story';
 import Slide from './slide';
-import Media from './media';
+import Gallery from './gallery';
 
 function Home() {
   return (
@@ -9,8 +9,7 @@ function Home() {
 
       <Slide />
       <Story />
-      {/* <Gallery /> */}
-      <Media />
+      <Gallery />
       <Event />
     </div>
   );

@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import {
-  Container, Row, Col, Pagination,
-} from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+
 import gallery1 from '../asset/couple/gallery1.jpg';
 import gallery2 from '../asset/couple/gallery2.png';
 import gallery3 from '../asset/couple/gallery3.jpg';
@@ -29,53 +27,78 @@ const images = [
   { id: 'gallery11', src: gallery11, alt: 'Couple in love' },
   { id: 'gallery12', src: gallery12, alt: 'Couple laughing together' },
 ];
-
-const Media = () => {
-  const [cardsPerPage] = useState(window.innerWidth < 768 ? 1 : 3);
+const Gallery = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imagesPerPage, setImagesPerPage] = useState(3);
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
+  const totalImages = images.length;
+  const totalPages = Math.ceil(totalImages / imagesPerPage);
+  const indexOfLastImage = currentPage * imagesPerPage;
+  const indexOfFirstImage = indexOfLastImage - imagesPerPage;
+  const currentImages = images.slice(indexOfFirstImage, indexOfLastImage);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
   };
 
-  const totalPages = Math.ceil(images.length / cardsPerPage);
-  const startIndex = (currentPage - 1) * cardsPerPage;
-  const endIndex = startIndex + cardsPerPage;
-
-  const handleImageLoad = () => {
-    setImageLoaded(true);
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
   };
+
+  useEffect(() => {
+    // Update the number of images per page based on the window width
+    const updateImagesPerPage = () => {
+      if (window.innerWidth >= 1024) {
+        setImagesPerPage(3);
+      } else if (window.innerWidth >= 768) {
+        setImagesPerPage(2);
+      } else {
+        setImagesPerPage(1);
+      }
+    };
+
+    // Call the function on initial mount and window resize
+    updateImagesPerPage();
+    window.addEventListener('resize', updateImagesPerPage);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', updateImagesPerPage);
+    };
+  }, []);
 
   return (
-    <section id="gallery" className="h-screen flex flex-col bg-gray-200">
-      <Container className="h-full">
-        <Row className="justify-content-center">
-          <Row className="flex items-center justify-space-between g-2 w-full md:flex-row flex-wrap">
-            {images.slice(startIndex, endIndex).map((item) => (
-              <Col key={item.id} id={item.id} xs={12} sm={6} md={4} lg={3} className="card-main shadow-md hover:scale-105 transition-transform duration-300">
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  style={{ display: imageLoaded ? 'block' : 'none' }}
-                  onLoad={handleImageLoad}
-                />
-              </Col>
-            ))}
-          </Row>
-        </Row>
-        <Row className="justify-content-center">
-          <Pagination>
-            {Array.from({ length: totalPages }, (_, index) => (
-              <Pagination.Item key={index} active={index + 1 === currentPage} onClick={() => handlePageChange(index + 1)}>
-                {index + 1}
-              </Pagination.Item>
-            ))}
-          </Pagination>
-        </Row>
-      </Container>
-    </section>
+    <>
+      <h6
+        id="gallery"
+        className="text-uppercase mb-3 mt-4"
+        style={{
+          letterSpacing: '3px', color: '#e47a2e', textAlign: 'center', fontSize: '2rem',
+        }}
+      >
+        Our Gallery
+      </h6>
+      {' '}
+      <div className="gallery-container">
+        {currentImages.map((image) => (<img key={image.id} src={image.src} alt={image.alt} className="image-item" />
+        ))}
+      </div>
+      <div className="pagination">
+
+        <button onClick={handlePrevPage} disabled={currentPage === 1} type="button">
+          Prev
+        </button>
+        <span>{`Page ${currentPage} of ${totalPages}`}</span>
+        <button onClick={handleNextPage} disabled={currentPage === totalPages} type="button">
+          Next
+        </button>
+      </div>
+    </>
   );
 };
 
-export default Media;
+export default Gallery;

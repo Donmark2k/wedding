@@ -97,6 +97,7 @@ function NavBar() {
                   to="/gifts"
                   as={Link}
                   onClick={handleOffcanvasClose}
+                  style={{ color: 'blueviolet' }}
                 >
                   Registry
                 </NavLink>
