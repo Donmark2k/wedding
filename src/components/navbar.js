@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import '../App.css';
 import {
   Nav, Navbar, Container, Offcanvas,
@@ -8,6 +8,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import logo from '../asset/ring.png';
 
 function NavBar() {
+  const location = useLocation();
   const [activeLink, setActiveLink] = useState('home');
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const handleOffcanvasToggle = () => setShowOffcanvas((prev) => !prev);
@@ -52,6 +53,7 @@ function NavBar() {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
+                {location.pathname === '/' && (
                 <ScrollLink
                   to="story"
                   spy
@@ -64,7 +66,9 @@ function NavBar() {
                 >
                   Our Story
                 </ScrollLink>
+                )}
 
+                {location.pathname === '/' && (
                 <ScrollLink
                   to="gallery"
                   spy
@@ -77,7 +81,9 @@ function NavBar() {
                 >
                   Gallery
                 </ScrollLink>
+                )}
 
+                {location.pathname === '/' && (
                 <ScrollLink
                   to="event"
                   spy
@@ -90,7 +96,19 @@ function NavBar() {
                 >
                   Event
                 </ScrollLink>
+                )}
+                {location.pathname !== '/' && (
+                <NavLink
+                  className="nav-link"
+                  to="/"
+                  as={Link}
+                  onClick={handleOffcanvasClose}
+                  style={{ color: 'blueviolet' }}
+                >
+                  Home
+                </NavLink>
 
+                )}
                 <div className="d-none d-md-none d-lg-block mt-3 mb-3 vr" />
                 <NavLink
                   className="nav-link"
