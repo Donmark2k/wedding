@@ -157,13 +157,13 @@ img.articlePic {
   width: 87%;
   display: block;
   margin: 0 auto;
-  height: 80vh;
+  /* height: 80vh; */
 }
 
 .pagination {
   display: block;
   margin: 12px auto;
-  width: 185px;
+  width: 189px;
 }
 
 .pagination button {
