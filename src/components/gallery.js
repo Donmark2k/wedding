@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import gallery1 from '../asset/couple/gallery1.jpg';
+import gallery1 from '../asset/couple/gallery1.png';
 import gallery2 from '../asset/couple/gallery2.png';
-import gallery3 from '../asset/couple/gallery3.jpg';
-import gallery4 from '../asset/couple/gallery4.jpg';
-import gallery5 from '../asset/couple/gallery5.jpg';
-import gallery6 from '../asset/couple/gallery6.jpg';
+import gallery3 from '../asset/couple/gallery3.png';
+import gallery4 from '../asset/couple/gallery4.png';
+import gallery5 from '../asset/couple/gallery5.png';
+import gallery6 from '../asset/couple/gallery6.png';
 import gallery7 from '../asset/couple/gallery7.jpg';
 import gallery8 from '../asset/couple/gallery8.jpg';
 import gallery9 from '../asset/couple/gallery9.jpg';

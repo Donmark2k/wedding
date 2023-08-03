@@ -5,8 +5,8 @@ import {
 import { Image } from 'react-bootstrap';
 import storyA from '../asset/couple/storyA.jpg';
 import storyB from '../asset/couple/storyB.jpg';
-import meetA from '../asset/couple/meetA.jpg';
-import meetB from '../asset/couple/meetB.jpg';
+import meetA from '../asset/couple/meetA.png';
+import meetB from '../asset/couple/meetB.png';
 
 const Story = () => (
   <>

@@ -1,7 +1,7 @@
 import { FaHeart } from 'react-icons/fa';
 import { Image } from 'react-bootstrap';
-import eventA from '../asset/couple/eventA.jpg';
-import eventB from '../asset/couple/eventB.jpg';
+import eventA from '../asset/couple/eventA.png';
+import eventB from '../asset/couple/eventB.png';
 
 const Event = () => (
   // Wedding Event
