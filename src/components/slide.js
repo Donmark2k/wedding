@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import slideA from '../asset/slide/slide6.png';
-import slideB from '../asset/slide/slide5.jpg';
-import slideC from '../asset/slide/slide3.jpg';
+import Image from 'react-bootstrap/Image';
+import slideA from '../asset/slide/slideA.png';
+import slideB from '../asset/slide/slideB.png';
+import slideC from '../asset/slide/slideC.png';
+import slideAD from '../asset/slide/slideAD.png';
+import slideBD from '../asset/slide/slideBD.png';
+import slideCD from '../asset/slide/slideCD.png';
 
 function Slide() {
   const [index, setIndex] = useState(0);
@@ -16,9 +20,17 @@ function Slide() {
 
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
-          <img
+          <Image
+            className="mobile"
             src={slideA}
             alt="First slide"
+            fluid
+          />
+          <Image
+            className="desk"
+            src={slideAD}
+            alt="First slide"
+            fluid
           />
           <Carousel.Caption>
             <div className="p-3">
@@ -37,9 +49,17 @@ function Slide() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
+          <Image
+            className="mobile"
             src={slideB}
-            alt="Second slide"
+            alt="First slide"
+            fluid
+          />
+          <Image
+            className="desk"
+            src={slideBD}
+            alt="First slide"
+            fluid
           />
 
           <Carousel.Caption>
@@ -59,9 +79,17 @@ function Slide() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
+          <Image
+            className="mobile"
             src={slideC}
-            alt="Third slide"
+            alt="First slide"
+            fluid
+          />
+          <Image
+            className="desk"
+            src={slideCD}
+            alt="First slide"
+            fluid
           />
 
           <Carousel.Caption>

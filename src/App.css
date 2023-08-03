@@ -7,6 +7,10 @@
   position: relative;
 }
 
+.desk {
+  display: none;
+}
+
 .carousel-item img {
   object-fit: cover;
   width: 100%;
@@ -157,7 +161,6 @@ img.articlePic {
   width: 87%;
   display: block;
   margin: 0 auto;
-  /* height: 80vh; */
 }
 
 .pagination {
@@ -176,6 +179,14 @@ img.articlePic {
 }
 
 @media (min-width: 768px) {
+  .desk {
+    display: unset;
+  }
+
+  .mobile {
+    display: none;
+  }
+
   .carousel-item img {
     height: 100vh;
   }
