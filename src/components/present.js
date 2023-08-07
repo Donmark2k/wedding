@@ -151,8 +151,6 @@ const Present = () => {
           </Button>
           <Button variant="primary">Thank you</Button>
         </Modal.Footer>
-        {/* {showPaymentForm && <Payment />} */}
-
       </Modal>
     </>
   );
