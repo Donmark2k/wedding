@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-// import Payment from './payment';
 import babyCot from '../asset/gift/baby-cot.jpg';
 import cup from '../asset/gift/cup.jpg';
 import fridge from '../asset/gift/fridge.jpg';
@@ -103,12 +102,6 @@ const Present = () => {
     setSelectedGift(gift);
     setShow(true);
   };
-
-  // const [showPaymentForm, setShowPaymentForm] = useState(false);
-  // const handlePayment = () => {
-  //   setShowPaymentForm(true);
-  // };
-
   return (
     <>
       <section id="myrecentwork" className="grid-container" aria-label="my recent work">

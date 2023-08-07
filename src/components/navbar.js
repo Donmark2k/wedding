@@ -21,9 +21,9 @@ function NavBar() {
   };
   // Inline styles for ScrollLink elements
   const scrollLinkStyle = {
-    textDecoration: 'none', // Remove underline
-    marginRight: '1rem', // Adjust this value to add spacing between elements
-    cursor: 'pointer', // Add pointer cursor
+    textDecoration: 'none',
+    marginRight: '1rem',
+    cursor: 'pointer',
     marginTop: '8px',
   };
 
@@ -73,9 +73,9 @@ function NavBar() {
                   to="gallery"
                   spy
                   smooth
-                  offset={-70} // Adjust this value as needed to properly align the scrolling position
+                  offset={-70}
                   duration={500}
-                  style={scrollLinkStyle} // Apply inline styling
+                  style={scrollLinkStyle}
                   className={activeLink === 'gallery' ? 'active navbar-link' : 'navbar-link'}
                   onClick={() => onUpdateActiveLink('gallery')}
                 >
@@ -88,9 +88,9 @@ function NavBar() {
                   to="event"
                   spy
                   smooth
-                  offset={-70} // Adjust this value as needed to properly align the scrolling position
+                  offset={-70}
                   duration={500}
-                  style={scrollLinkStyle} // Apply inline styling
+                  style={scrollLinkStyle}
                   className={activeLink === 'event' ? 'active navbar-link' : 'navbar-link'}
                   onClick={() => onUpdateActiveLink('event')}
                 >
