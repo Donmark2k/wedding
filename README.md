@@ -92,6 +92,12 @@ After you're finished please remove all the comments and instructions!
     <li><a href="https://www.react.dev/">Link to React</a></li>
   </ul>
 </details>
+<details>
+  <summary>React Bootstrap</summary>
+  <ul>
+    <li><a href="https://react-bootstrap.github.io/">Link to React Bootstrap</a></li>
+  </ul>
+</details>
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>

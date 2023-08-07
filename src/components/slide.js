@@ -6,7 +6,7 @@ import slideB from '../asset/slide/slideB.png';
 import slideC from '../asset/slide/slideC.png';
 import slideAD from '../asset/slide/slideAD.png';
 import slideBD from '../asset/slide/slideBD.png';
-import slideCD from '../asset/slide/slideCD.png';
+import slideCD from '../asset/slide/slideCDA.png';
 
 function Slide() {
   const [index, setIndex] = useState(0);
