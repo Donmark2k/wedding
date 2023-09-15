@@ -109,9 +109,9 @@ const Story = () => (
                   <p className="m-2" style={{ fontSize: '17px' }}>
                     <b>Joseph:</b>
                     {' '}
-                    My first encounter with Rose (Rosy) as I do call her back then was in SCIENCE PARK. Hmmmm! We
+                    My first encounter with Rose (Rosy) as I do call her back then was in COMPUTER LAB. Hmmmm! We
                     were just gisting and during our first meeting, I asked her 'What is your name' .
-                    What got my attention was her surname “Okpe”. I was like I have seen my sister that my dad gave birth to
+                    What got my attention was her surname “Rosy”. I was like I have seen my sister that my dad gave birth to
                     without informing us.
                   </p>
                 </div>
@@ -124,14 +124,14 @@ const Story = () => (
                   style={{ background: '#edf5f7', borderRadius: '12px' }}
                 >
                   <h4 className="mb-2">First Date</h4>
-                  <p className="text-uppercase mb-2">June 2022</p>
+                  <p className="text-uppercase mb-2">June 2019</p>
                   <p className="m-0" style={{ fontSize: '17px' }}>
                     <b>Rose:</b>
                     {' '}
-                    Fast forward to after school, life continues, Fidel came into the picture and in my mind,
+                    Fast forward to after school, life continues, Joseph came into the picture and in my mind,
                     my brother in a far-away land. The friendship grew more than ever. The chemistry was different. Initially, I
-                    thought my guy was joking, but here we are❤. Fidel has impacted my life greatly and consistently helps me to
-                    be a better person. Yeah... I'm blessed to have him by my side. He is just the crown😍 that fits me. The one
+                    thought my guy was joking, but here we are❤. Joseph has impacted my life greatly and consistently helps me to
+                    be a better me. Yeah... I'm blessed to have him by my side. He is just the crown😍 that fits me. The one
                     that makes my happiness his priority.
                   </p>
                   <br />
