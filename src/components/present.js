@@ -137,12 +137,6 @@ const Present = () => {
                 Amount:
                 {selectedGift.amount}
               </p>
-              <p>
-                Name: Ochuba Chukwuemeka
-              </p>
-              <p>
-                Acct no: 2087474400 (UBA)
-              </p>
             </>
           )}
         </Modal.Body>
