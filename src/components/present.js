@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import babyCot from '../asset/gift/baby-cot.jpg';
@@ -149,7 +150,12 @@ const Present = () => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary">Thank you</Button>
+          <Button variant="primary" className="button-with-link">
+            {selectedGift && (
+            <Link to={`/pay?amount=${selectedGift.amount}`}>Proceed</Link>
+            )}
+          </Button>
+
         </Modal.Footer>
       </Modal>
     </>

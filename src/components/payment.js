@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import PaystackPop from '@paystack/inline-js';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const PaystackIntegration = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const amount = queryParams.get('amount') || '';
+  const amountInKobo = parseInt(amount.replace(/,/g, ''), 10) * 100;
   const [email, setEmail] = useState('');
-  const [amount, setAmount] = useState('');
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
 
@@ -12,7 +17,7 @@ const PaystackIntegration = () => {
     const paystack = new PaystackPop();
     paystack.newTransaction({
       key: 'pk_test_86963e6c82576f869d86c89ae441bec44073e913',
-      amount: amount * 100,
+      amount: amountInKobo,
       email,
       firstname,
       lastname,
@@ -20,12 +25,13 @@ const PaystackIntegration = () => {
         const message = `Payment Complete! Reference ${transaction.reference}`;
         alert(message);
         setEmail('');
-        setAmount('');
         setFirstname('');
         setLastname('');
+        navigate('/gifts'); // Use navigate to redirect
       },
       onCancel() {
         alert('You have cancelled the transaction');
+        navigate('/gifts'); // Use navigate to redirect
       },
     });
   };
@@ -38,7 +44,7 @@ const PaystackIntegration = () => {
         </div>
         <div className="form-group">
           <label htmlFor="amount">Amount</label>
-          <input type="tel" value={amount} onChange={(e) => setAmount(e.target.value)} id="amount" required />
+          <input type="tel" value={amount} readOnly id="amount" required />
         </div>
         <div className="form-group">
           <label htmlFor="first-name">First Name</label>

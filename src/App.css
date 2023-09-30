@@ -233,3 +233,14 @@ img.articlePic {
     width: 33%;
   }
 }
+
+.button-with-link {
+  position: relative;
+  color: white;
+
+}
+
+.button-with-link a {  
+  text-decoration: none;
+  color: white;
+}
