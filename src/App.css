@@ -181,10 +181,9 @@ img.articlePic {
 .button-with-link {
   position: relative;
   color: white;
-
 }
 
-.button-with-link a {  
+.button-with-link a {
   text-decoration: none;
   color: white;
 }
@@ -195,7 +194,7 @@ img.articlePic {
   display: block;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .form-group {
@@ -215,11 +214,10 @@ input {
   margin-bottom: 12px;
 }
 
-.buttonPay{
-    margin: 12px 32%;
-    width: 140px;
+.buttonPay {
+  margin: 12px 32%;
+  width: 140px;
 }
-
 
 @media (min-width: 768px) {
   .desk {
@@ -257,26 +255,27 @@ input {
   .image-item {
     width: 49%;
   }
+
   .form-container {
     width: 60%;
   }
-  
+
   .form-group {
     flex-direction: row;
-    justify-self: space-between;
+    justify-content: space-between;
     align-items: center;
     gap: 24px;
     margin-bottom: 18px;
   }
-  
+
   label {
     margin-right: 0;
     margin-bottom: 5px;
-    padding: auto 0;
   }
-  .buttonPay{
+
+  .buttonPay {
     margin: 0 45%;
-}
+  }
 }
 
 @media (min-width: 890px) {
