@@ -3,8 +3,8 @@ import {
   FaTwitter, FaFacebookF, FaLinkedinIn, FaInstagram,
 } from 'react-icons/fa';
 import { Image } from 'react-bootstrap';
-import storyA from '../asset/couple/storyA.jpg';
-import storyB from '../asset/couple/storyB.jpg';
+import storyA from '../asset/couple/storyaa.png';
+import storyB from '../asset/couple/storybb.png';
 import meetA from '../asset/couple/meetA.png';
 import meetB from '../asset/couple/meetB.png';
 

@@ -32,7 +32,6 @@ const PaystackIntegration = () => {
         navigate('/gifts'); // Use navigate to redirect
       },
       onCancel() {
-        alert('You have cancelled the transaction');
         navigate('/gifts'); // Use navigate to redirect
       },
     });
@@ -41,28 +40,28 @@ const PaystackIntegration = () => {
     <>
       <form id="paymentForm">
         <div className="form-container">
-        <div className="form-group">
-          <label htmlFor="email-address">Email Address:</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} id="email-address" required />
+          <div className="form-group">
+            <label htmlFor="email-address">Email Address:</label>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} id="email-address" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="amount">Amount:</label>
+            <input type="tel" value={amount} readOnly id="amount" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="first-name">First Name:</label>
+            <input type="text" value={firstname} onChange={(e) => setFirstname(e.target.value)} id="first-name" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="last-name">Last Name: </label>
+            <input type="text" value={lastname} onChange={(e) => setLastname(e.target.value)} id="last-name" />
+          </div>
+          <div className="form-submit">
+            <Button variant="primary" className="buttonPay" onClick={paywithpaystack}>
+              Proceed to Pay
+            </Button>
+          </div>
         </div>
-        <div className="form-group">
-          <label htmlFor="amount">Amount:</label>
-          <input type="tel" value={amount} readOnly id="amount" required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="first-name">First Name:</label>
-          <input type="text" value={firstname} onChange={(e) => setFirstname(e.target.value)} id="first-name" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="last-name">Last Name: </label>
-          <input type="text" value={lastname} onChange={(e) => setLastname(e.target.value)} id="last-name" />
-        </div>
-        <div className="form-submit">
-          <Button variant="primary" className="buttonPay" onClick={paywithpaystack}>
-            Proceed to Pay
-          </Button>
-        </div>
-      </div>
       </form>
     </>
   );
