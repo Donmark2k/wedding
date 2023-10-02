@@ -1,57 +1,70 @@
-import React from 'react';
-// import PaystackPop from 'paystack-pop';
-// import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState } from 'react';
+import PaystackPop from '@paystack/inline-js';
+import { useLocation, useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
-const Payment = () => {
-  function payWithPaystack(e) {
+const PaystackIntegration = () => {
+  const paystackApiKey = process.env.REACT_APP_PAYSTACK_API_KEY;
+  const navigate = useNavigate();
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const amount = queryParams.get('amount') || '';
+  const amountInKobo = parseInt(amount.replace(/,/g, ''), 10) * 100;
+  const [email, setEmail] = useState('');
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
+
+  const paywithpaystack = (e) => {
     e.preventDefault();
-
-    // const handler = PaystackPop.setup({
-    //   key: 'pk_test_86963e6c82576f869d86c89ae441bec44073e913', // Replace with your public key
-    //   email: document.getElementById('email-address').value,
-    //   amount: document.getElementById('amount').value * 100,
-    //   ref: `${Math.floor((Math.random() * 1000000000) + 1)}`,
-    //   onClose() {
-    //     toast.error('Payment window closed.', { autoClose: 3000 });
-    //   },
-    //   callback(response) {
-    //     const message = `Payment complete! Reference: ${response.reference}`;
-    //     toast.success(message, { autoClose: 5000 });
-    //   },
-    // });
-
-    // handler.openIframe();
-  }
-
+    const paystack = new PaystackPop();
+    paystack.newTransaction({
+      key: paystackApiKey,
+      amount: amountInKobo,
+      email,
+      firstname,
+      lastname,
+      onSuccess(transaction) {
+        const message = `Payment Complete! Reference ${transaction.reference}`;
+        alert(message);
+        setEmail('');
+        setFirstname('');
+        setLastname('');
+        navigate('/gifts'); // Use navigate to redirect
+      },
+      onCancel() {
+        navigate('/gifts'); // Use navigate to redirect
+      },
+    });
+  };
   return (
     <>
       <form id="paymentForm">
-        <div className="form-group">
-          <label htmlFor="email-address">Email Address</label>
-          <input type="email" id="email-address" required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="amount">Amount</label>
-          <input type="tel" id="amount" required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="first-name">First Name</label>
-          <input type="text" id="first-name" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="last-name">Last Name</label>
-          <input type="text" id="last-name" />
-        </div>
-        <div className="form-submit">
-          <button type="submit" onClick={payWithPaystack}> Pay </button>
+        <div className="form-container">
+          <div className="form-group">
+            <label htmlFor="email-address">Email Address:</label>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} id="email-address" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="amount">Amount:</label>
+            <input type="tel" value={amount} readOnly id="amount" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="first-name">First Name:</label>
+            <input type="text" value={firstname} onChange={(e) => setFirstname(e.target.value)} id="first-name" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="last-name">Last Name: </label>
+            <input type="text" value={lastname} onChange={(e) => setLastname(e.target.value)} id="last-name" />
+          </div>
+          <div className="form-submit">
+            <Button variant="primary" className="buttonPay" onClick={paywithpaystack}>
+              Proceed to Pay
+            </Button>
+          </div>
         </div>
       </form>
-      {/* <ToastContainer /> */}
-      {' '}
-      {/* Container for displaying toasts */}
     </>
   );
 };
 
-export default Payment;
+export default PaystackIntegration;

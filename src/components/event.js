@@ -22,7 +22,7 @@ const Event = () => (
       <div className="row justify-content-center">
         <div className="col-md-6 text-center">
           <h5 className="font-weight-normal text-muted mb-3 pb-3">
-            We cannot wait to spend our afternoon with you as we celebrate the love we share.
+            We cannot wait to spend our day with you as we celebrate the love we share.
           </h5>
         </div>
       </div>
@@ -36,10 +36,10 @@ const Event = () => (
             />
             <h4 className="my-3">The Reception</h4>
             <p className="mb-2">
-              CWO Hall, Our Lady of Assumption Catholic Church, Okwuani, Nnewi, Anambra State.
+              CWO Hall, Our Lady of Lourdes Catholic Church, Coker, Lagos, Lagos State.
             </p>
             <p className="mb-0">1:00PM - 4:00PM</p>
-            <p className="mb-0">20 May, 2023</p>
+            <p className="mb-0">20 October, 2023</p>
           </div>
         </div>
         <div className="col-md-6">
@@ -51,10 +51,10 @@ const Event = () => (
             />
             <h4 className="my-3">Wedding Party</h4>
             <p className="mb-2">
-              HOUSE ON THE ROCK, NNEWI. 150 IGWE ORIZU RD, OTOLO, NNEWI, ANAMBRA STATE.
+              Our Lady of Lourdes Catholic Church, Coker, Lagos, Lagos State.
             </p>
             <p className="mb-0">10:00AM - 12:00PM</p>
-            <p className="mb-0">29th July, 2023</p>
+            <p className="mb-0">29th October, 2023</p>
           </div>
         </div>
       </div>

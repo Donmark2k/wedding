@@ -114,7 +114,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- > Add a link to your deployed project. -->
 
-- [live version]()
+- [live version](https://rosyj.netlify.app/)
 
 ## Project Screenshots
 
