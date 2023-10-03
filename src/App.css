@@ -277,7 +277,9 @@ input {
     margin: 0 45%;
   }
 }
-
+.desc {
+  font-size: 12px;
+}
 @media (min-width: 890px) {
   .down {
     padding-bottom: 9%;

@@ -22,72 +22,84 @@ const Present = () => {
       name: 'Baby Cot',
       image: babyCot,
       amount: '80,000',
+      desc: ' A magical cocoon where dreams begin, and where babies can peacefully drift off to sleep in a world filled with wonder.',
     },
     {
       id: '2',
       name: 'sets of cups',
       image: cup,
-      amount: '30,000',
+      amount: '12,000',
+      desc: ' They are not just ordinary cups; they are vessels of joy, ready to hold your favorite beverages in love for easy sharing',
     },
     {
       id: '3',
       name: 'Fridge',
       image: fridge,
       amount: '100,000',
+      desc: ' It is more than just a household appliance; it is a silent witness to the beautiful moments a couple experiences together',
     },
     {
       id: '4',
       name: 'Baby Net',
       image: babyNet,
       amount: '80,000',
+      desc: ' A a sanctuary of love and security, where the little one peacefully dreams, surrounded by the love and devotion of their parents.',
     },
     {
       id: '5',
       name: 'Fruit Blender',
       image: blender,
-      amount: '30,000',
+      amount: '8,000',
+      desc: ' It blends two unique personalities, tastes, and dreams into a harmonious and flavorful partnership.',
     },
     {
       id: '6',
       name: 'Gas Cylinder',
       image: cooker,
       amount: '120,000',
+      desc: ' Embodiment of strength, stability, and warmth that relationship provides, much like the steady supply of fuel that keeps a home filled with love and comfort.',
     },
     {
       id: '7',
       name: 'Toaster',
       image: oven,
       amount: '32,000',
+      desc: ' It is not just an everyday kitchen appliance; it is a charming symbol of the warmth and sweetness that a couple shares in their journey through life.',
     },
     {
       id: '8',
       name: 'sets of plates',
       image: plates,
       amount: '23,000',
+      desc: ' A symbol of their shared journey and the beautiful bond they have nurtured.',
     },
     {
       id: '9',
       name: 'Pot sets',
       image: pots,
-      amount: '29,000',
+      amount: '79,000',
+      desc: ' A collection that goes far beyond its culinary purpose. These pots are a testament to the couple\'s enduring love, a love that simmers and bubbles just like the delicious concoctions they prepare together.',
     },
     {
       id: '10',
       name: 'Plates Rack',
       image: rack,
-      amount: '80,000',
+      amount: '12,000',
+      desc: ' This plates rack holds more than just plates; it cradles memories. Each plate suspended from its hooks carries a story, a tale of countless meals enjoyed side by side.',
     },
     {
       id: '11',
       name: 'Deep Freezer',
       image: freezer,
-      amount: '30,000',
+      amount: '200,000',
+      desc: ' This trusty appliance is not just a freezer; it is a keeper of treasures. It holds within its icy embrace the flavors of their shared journey, preserving the love-infused creations that have marked their life together.',
     },
     {
       id: '12',
       name: 'Plasma TV',
       image: tv,
-      amount: '70,000',
+      amount: '470,000',
+      desc: ' Whether they are watching their favorite k-drama, nollywood, or a heartwarming documentary, the TV brings them closer together, wrapping them in a shared narrative.',
     },
 
   ];
@@ -130,8 +142,11 @@ const Present = () => {
             <>
               <img src={selectedGift.image} alt={selectedGift.name} style={{ maxWidth: '100%' }} />
               <p>
-                Name:
                 {selectedGift.name}
+                :
+                <span className="desc">
+                  {selectedGift.desc}
+                </span>
               </p>
               <p>
                 Amount:
