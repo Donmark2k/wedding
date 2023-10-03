@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import PaystackPop from '@paystack/inline-js';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import PaystackPop from '@paystack/inline-js';
 
 const PaystackIntegration = () => {
   const paystackApiKey = process.env.REACT_APP_PAYSTACK_API_KEY;
@@ -25,17 +27,19 @@ const PaystackIntegration = () => {
       lastname,
       onSuccess(transaction) {
         const message = `Payment Complete! Reference ${transaction.reference}`;
-        alert(message);
+        toast.success(message); // Use toast for success message
         setEmail('');
         setFirstname('');
         setLastname('');
         navigate('/gifts'); // Use navigate to redirect
       },
       onCancel() {
+        toast.error('Payment canceled'); // Use toast for error message
         navigate('/gifts'); // Use navigate to redirect
       },
     });
   };
+
   return (
     <>
       <form id="paymentForm">
