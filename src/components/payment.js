@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PaystackPop from '@paystack/inline-js';
+import VerifyPayment from './verifyPayment';
 
 const PaystackIntegration = () => {
   const paystackApiKey = process.env.REACT_APP_PAYSTACK_API_KEY;
@@ -15,6 +16,8 @@ const PaystackIntegration = () => {
   const [email, setEmail] = useState('');
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
+  const [paymentSuccessful, setPaymentSuccessful] = useState(false); // Add state for tracking payment success
+  const [reference, setReference] = useState('');
 
   const paywithpaystack = (e) => {
     e.preventDefault();
@@ -26,12 +29,14 @@ const PaystackIntegration = () => {
       firstname,
       lastname,
       onSuccess(transaction) {
-        const message = `Payment Complete! Reference ${transaction.reference}`;
-        toast.success(message); // Use toast for success message
+        // const message = `Payment Complete! Reference ${transaction.reference}`;
+        // toast.success(message);
         setEmail('');
         setFirstname('');
         setLastname('');
-        navigate('/gifts'); // Use navigate to redirect
+        setPaymentSuccessful(true); // Set paymentSuccessful to true
+        setReference(transaction.reference);
+        // navigate('/gifts'); // Use navigate to redirect
       },
       onCancel() {
         toast.error('Payment canceled'); // Use toast for error message
@@ -67,6 +72,8 @@ const PaystackIntegration = () => {
           </div>
         </div>
       </form>
+      {paymentSuccessful && <VerifyPayment reference={reference} />}
+
     </>
   );
 };
