@@ -41,7 +41,7 @@ const VerifyPayment = ({ reference }) => {
   useEffect(() => {
     if (verificationResult && !toastDisplayed) {
       toast.success(verificationResult, {
-        autoClose: 5000, // Set the duration in milliseconds (e.g., 5000ms = 5 seconds)
+        autoClose: 8000,
       });
       setToastDisplayed(true);
       navigate('/gifts');
