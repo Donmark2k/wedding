@@ -41,7 +41,7 @@ const VerifyPayment = ({ reference }) => {
   useEffect(() => {
     if (verificationResult && !toastDisplayed) {
       toast.success(verificationResult, {
-        autoClose: 8000,
+        autoClose: 7000,
       });
       setToastDisplayed(true);
       navigate('/gifts');
