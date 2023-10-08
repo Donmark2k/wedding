@@ -29,8 +29,7 @@ const VerifyPayment = ({ reference }) => {
           setVerificationResult('Payment Failed');
         }
       } catch (error) {
-        console.error('Error verifying payment:', error);
-        setVerificationResult('An error occurred');
+        setVerificationResult(`An error occurred, ${error}`);
       }
     };
 
@@ -41,7 +40,7 @@ const VerifyPayment = ({ reference }) => {
   useEffect(() => {
     if (verificationResult && !toastDisplayed) {
       toast.success(verificationResult, {
-        autoClose: 5000, // Set the duration in milliseconds (e.g., 5000ms = 5 seconds)
+        autoClose: 7000,
       });
       setToastDisplayed(true);
       navigate('/gifts');
