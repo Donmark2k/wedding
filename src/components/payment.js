@@ -29,14 +29,11 @@ const PaystackIntegration = () => {
       firstname,
       lastname,
       onSuccess(transaction) {
-        // const message = `Payment Complete! Reference ${transaction.reference}`;
-        // toast.success(message);
         setEmail('');
         setFirstname('');
         setLastname('');
         setPaymentSuccessful(true); // Set paymentSuccessful to true
         setReference(transaction.reference);
-        // navigate('/gifts'); // Use navigate to redirect
       },
       onCancel() {
         toast.error('Payment canceled'); // Use toast for error message

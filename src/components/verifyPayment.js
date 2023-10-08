@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const VerifyPayment = ({ reference }) => {
+  const navigate = useNavigate();
   const paystackApiSecretKey = process.env.REACT_APP_PAYSTACK_API_SECRET_KEY;
   const [verificationResult, setVerificationResult] = useState(null);
   const [toastDisplayed, setToastDisplayed] = useState(false);
@@ -38,16 +40,15 @@ const VerifyPayment = ({ reference }) => {
   // Show toast only once
   useEffect(() => {
     if (verificationResult && !toastDisplayed) {
-      toast.success(verificationResult);
+      toast.success(verificationResult, {
+        autoClose: 5000, // Set the duration in milliseconds (e.g., 5000ms = 5 seconds)
+      });
       setToastDisplayed(true);
+      navigate('/gifts');
     }
-  }, [verificationResult, toastDisplayed]);
+  }, [verificationResult, toastDisplayed, navigate]);
 
-  return (
-    <div>
-      {/* {verificationResult && toast.success(verificationResult)} */}
-    </div>
-  );
+  return <div />;
 };
 
 export default VerifyPayment;
