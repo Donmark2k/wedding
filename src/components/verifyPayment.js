@@ -29,8 +29,7 @@ const VerifyPayment = ({ reference }) => {
           setVerificationResult('Payment Failed');
         }
       } catch (error) {
-        console.error('Error verifying payment:', error);
-        setVerificationResult('An error occurred');
+        setVerificationResult(`An error occurred, ${error}`);
       }
     };
 
