@@ -52,7 +52,7 @@ const PaystackIntegration = () => {
           </div>
           <div className="form-group">
             <label htmlFor="amount">Amount:</label>
-            <input type="tel" value={amount} readOnly id="amount" required />
+            <input type="tel" value={amount} id="amount" required />
           </div>
           <div className="form-group">
             <label htmlFor="first-name">First Name:</label>
